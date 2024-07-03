@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         title: ["Lilita One", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
     },
   },
