@@ -7,6 +7,8 @@ import basil from "../assets/basil.jpg";
 import mint from "../assets/mint.jpg";
 import calathea from "../assets/calathea.jpg";
 import cactus from "../assets/cactus.jpg";
+import philodendron from "../assets/philodendron-pink.jpg";
+import yucca from "../assets/yucca.jpg";
 
 export const plantList = [
   {
@@ -96,5 +98,23 @@ export const plantList = [
     water: 2,
     cover: mint,
     price: 4,
+  },
+  {
+    name: "philodendron",
+    category: "classique",
+    id: "2te",
+    light: 2,
+    water: 2,
+    cover: philodendron,
+    price: 31,
+  },
+  {
+    name: "yucca",
+    category: "extérieur",
+    id: "8uo",
+    light: 5,
+    water: 2,
+    cover: yucca,
+    price: 29,
   },
 ];

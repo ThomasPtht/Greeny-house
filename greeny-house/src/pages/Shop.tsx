@@ -39,6 +39,21 @@ const handleResetSearch = () => {
    // Utiliser searchResult si une recherche a été effectuée, sinon afficher toutes les plantes
    const plantsToDisplay = searchResult.length > 0 ? searchResult : plantList;
 
+
+   // Fonction pour trier par prix croissant
+   const handleSortPriceAsc = () => {
+    const sortedPlants = [...plantList].sort((a, b) => a.price - b.price);
+    setSearchResult(sortedPlants);
+    setSortOrder('asc');
+};
+
+   // Fonction pour trier par prix décroissant
+   const handleSortPriceDsc= () => {
+    const sortedPlants = [...plantList].sort((a, b) => b.price - a.price);
+    setSearchResult(sortedPlants);
+    setSortOrder('dsc');
+};
+
     return (
 
 
@@ -58,8 +73,8 @@ const handleResetSearch = () => {
 <div className='flex flex-col cursor-pointer'>
 {subCategoriesSort && (
                 <div className='ml-6'>
-                    <div className='border border-gray-800 p-2'>Prix croissant</div>
-                    <div className='border border-gray-800 p-2'>Prix décroissant</div>
+                    <div className='border border-gray-800 p-2' onClick={handleSortPriceAsc}>Prix croissant</div>
+                    <div className='border border-gray-800 p-2' onClick={handleSortPriceDsc}>Prix décroissant</div>
                     <div className='border border-gray-800 p-2'>Produits préférés</div>
                 </div>
 )}
